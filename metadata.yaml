@@ -1,0 +1,12 @@
+- id: front
+  name: Front
+  type: front
+  creationDate: "15/09/2023"
+- id: microservice
+  name: Micro
+  type: microservice
+  creationDate: "15/09/2023"
+- id: batch
+  name: Batch
+  type: batch
+  creationDate: "15/09/2023"

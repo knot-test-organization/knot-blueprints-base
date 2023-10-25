@@ -1,0 +1,27 @@
+code:
+  technology:
+  - id: "dedalowjavamonolithic"
+    label: "Java Monolithic Dedalow"
+  repository:
+  - id: "github"
+    label: "Github"
+  devcontainers: null
+alm:
+  orchestrator:
+    tool:
+    - id: "tekton"
+      name: "Tekton"
+      pipelineTemplates:
+      - id: "build-with-dedalowjavamonolithic"
+        name: "Java Monolithic Dedalow Pipeline"
+    gitBranching:
+    - id: "gitflow"
+      name: "Gitflow"
+  containerRegistry:
+    tool:
+    - id: "acr"
+      name: "ACR"
+iac:
+  databases: null
+collaboration: null
+deployment: null

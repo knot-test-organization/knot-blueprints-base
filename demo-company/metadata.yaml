@@ -1,0 +1,29 @@
+id: "demo-company"
+name: "Demo Company"
+country: "Spain"
+creationDate: "20/09/2023"
+areas:
+- id: "spain"
+  name: "Spain"
+  creationDate: "20/09/2023"
+  blueprints:
+  - id: microservices-architecture
+    name: New Microservices Architecture 
+    type: microservice
+    creationDate: 21/05/2008
+  - id: web-front
+    name: Blueprint Light Web Front
+    type: front
+    creationDate: 25/05/2008
+- id: "france"
+  name: "France"
+  creationDate: "20/09/2023"
+  blueprints:
+  - id: "serverless"
+    name: "Blueprint Serverless Architecture"
+    type: "microservice"
+    creationDate: "03/10/2023"
+  - id: web-front
+    name: Blueprint Light Web Front
+    type: front
+    creationDate: 25/05/2008

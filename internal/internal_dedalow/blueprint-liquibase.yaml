@@ -1,0 +1,34 @@
+code:
+  technology:
+  - id: "dedalowliquibase"
+    label: "LiquiBase Dedalow"
+  repository:
+  - id: "github"
+    label: "Github"
+  devcontainers: null
+alm:
+  orchestrator:
+    tool:
+    - id: "tekton"
+      name: "Tekton"
+      pipelineTemplates:
+      - id: "build-with-dedalowliquibase"
+        name: "LiquiBase Dedalow Pipeline"
+    gitBranching:
+    - id: "gitflow"
+      name: "Gitflow"
+  containerRegistry:
+    tool:
+    - id: "acr"
+      name: "ACR"
+iac:
+  databases:
+  - id: "mysql"
+    name: "Azure MySQL"
+    tiers:
+    - simpleType: "General Purpose"
+      complexType: "GP_Gen5_2"
+    versions:
+    - "5.7"
+collaboration: null
+deployment: null

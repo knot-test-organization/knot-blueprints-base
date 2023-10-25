@@ -1,0 +1,45 @@
+id: "nttdata"
+name: "NTT DATA"
+country: "Spain"
+creationDate: "05/10/2023"
+areas:
+- id: "base"
+  name: "Base"
+  creationDate: "05/10/2023"
+  blueprints:
+  - id: netcore
+    name: .Net Core Rest Service
+    type: microservice
+    creationDate: 15/03/2008
+  - id: "azfunc"
+    name: "Serverless Function"
+    type: "microservice"
+    creationDate: "03/10/2023"
+- id: "dar"
+  name: "DAR"
+  creationDate: "05/10/2023"
+  blueprints:
+  - id: "angular"
+    name: "Angular"
+    type: "front"
+    creationDate: "05/10/2023"
+  - id: java-restclient
+    name: API First Java Rest Client
+    type: front
+    creationDate: 21/05/2008
+  - id: java
+    name: Spring Boot Rest Service
+    type: microservice
+    creationDate: 25/05/2008
+  - id: netcore
+    name: .Net Core Rest Service
+    type: microservice
+    creationDate: 15/03/2008
+  - id: springboot-restservice
+    name: API First Spring Boot Rest Service
+    type: microservice
+    creationDate: 15/03/2008
+  - id: "azfunc"
+    name: "Serverless Function"
+    type: "microservice"
+    creationDate: "03/10/2023"

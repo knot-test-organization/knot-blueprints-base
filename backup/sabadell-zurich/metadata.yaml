@@ -1,0 +1,41 @@
+id: sabadell-zurich
+name: Sabadell Zurich
+country: Switzerland
+creationDate: 15/03/2008
+areas:
+  - id: base
+    name: Base
+    creationDate: 15/03/2008
+    blueprints:
+      - id: netcore
+        name: .Net Core Rest Service
+        type: microservice
+        creationDate: 15/03/2008
+  - id: desarrollo
+    name: Desarrollo
+    creationDate: 20/05/2008
+    blueprints:
+      - id: angular
+        name: Angular
+        type: front
+        creationDate: 20/05/2008
+      - id: java-restclient
+        name: API First Java Rest Client
+        type: front
+        creationDate: 21/05/2008
+      - id: java
+        name: Spring Boot Rest Service
+        type: microservice
+        creationDate: 25/05/2008
+  - id: marketing
+    name: Marketing
+    creationDate: 15/03/2008
+    blueprints:
+      - id: netcore
+        name: .Net Core Rest Service
+        type: microservice
+        creationDate: 15/03/2008
+      - id: springboot-restservice
+        name: API First Spring Boot Rest Service
+        type: microservice
+        creationDate: 15/03/2008

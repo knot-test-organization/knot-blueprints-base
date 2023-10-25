@@ -1,0 +1,27 @@
+code:
+  technology:
+  - id: "dedalowspring"
+    label: "Spring Dedalow"
+  repository:
+  - id: "github"
+    label: "Github"
+  devcontainers: null
+alm:
+  orchestrator:
+    tool:
+    - id: "tekton"
+      name: "Tekton"
+      pipelineTemplates:
+      - id: "build-with-dedalowspring"
+        name: "Spring Dedalow Pipeline"
+    gitBranching:
+    - id: "gitflow"
+      name: "Gitflow"
+  containerRegistry:
+    tool:
+    - id: "acr"
+      name: "ACR"
+iac:
+  databases: null
+collaboration: null
+deployment: null

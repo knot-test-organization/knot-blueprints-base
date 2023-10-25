@@ -1,0 +1,71 @@
+code:
+  repository:
+    - id: github
+      label: Github
+  devcontainers:
+    - alpine-3.15
+    - alpine-3.16
+    - alpine-3.17
+    - alpine-3.18
+alm:
+  orchestrator:
+    tool:
+      - id: tekton
+        name: Tekton
+      - id: githubactions
+        name: Github Actions
+    gitBranching:
+      - id: gitflow
+        name: Gitflow
+      - id: trunkbasedevelopment
+        name: Trunk Base Development
+  containerRegistry:
+    tool:
+      - id: acr
+        name: ACR
+  codeAnalysis:
+    tool:
+      - id: sonarqube
+        name: SonarQube
+iac:
+  databases:
+    - id: postgresql
+      name: Azure Database for PostgreSQL
+      tiers:
+        - simpleType: Basic
+          complexType: B_Gen5_1
+        - simpleType: General Purpose
+          complexType: GP_Gen5_2
+        - simpleType: Memory Optimized
+          complexType: MO_Gen5_2
+      versions:
+        - 9.5
+        - 9.6
+        - 10
+        - 10.0
+        - 10.2
+        - 11
+    - id: mssql
+      name: Azure SQL Database
+      tiers:
+        - simpleType: Basic
+          complexType: Basic
+        - simpleType: Standard
+          complexType: S0
+        - simpleType: Premium
+          complexType: HS_Gen4_1
+      versions:
+        - 2.0
+        - 12.0
+  serverless:
+    createFunctionApp: true
+collaboration:
+  connectivity:
+    tool:
+      - id: microsoftTeams
+        name: Microsoft Teams
+deployment:
+  hpa:
+    tool:
+      - id: hpa
+        name: Horizontal Pod Autoscaling

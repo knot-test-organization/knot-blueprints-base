@@ -1,0 +1,92 @@
+code:
+  technology:
+  - id: "angular"
+    label: "Angular"
+  repository:
+    - id: github
+      label: Github
+  devcontainers:
+    - javascript-node-16
+    - javascript-node-18
+    - javascript-node-18-copilot
+    - javascript-node-20
+alm:
+  orchestrator:
+    tool:
+      - id: tekton
+        name: Tekton
+        pipelineTemplates:
+        - id: "knot-angular"
+          name: "Angular Pipeline"
+    gitBranching:
+      - id: gitflow
+        name: Gitflow
+      - id: trunkbasedevelopment
+        name: Trunk Base Development
+  containerRegistry:
+    tool:
+      - id: acr
+        name: ACR
+  codeAnalysis:
+    tool:
+      - id: sonarqube
+        name: SonarQube
+iac:
+  databases:
+    - id: postgresql
+      name: Azure Database for PostgreSQL
+      tiers:
+        - simpleType: Basic
+          complexType: B_Gen5_1
+        - simpleType: General Purpose
+          complexType: GP_Gen5_2
+        - simpleType: Memory Optimized
+          complexType: MO_Gen5_2
+      versions:
+        - 9.5
+        - 9.6
+        - 10
+        - 10.0
+        - 10.2
+        - 11
+    - id: mssql
+      name: Azure SQL Database
+      tiers:
+        - simpleType: Basic
+          complexType: Basic
+        - simpleType: Standard
+          complexType: S0
+        - simpleType: Premium
+          complexType: HS_Gen4_1
+      versions:
+        - 2.0
+        - 12.0
+collaboration:
+  connectivity:
+    tool:
+      - id: microsoftTeams
+        name: Microsoft Teams
+deployment:
+  hpa:
+    tool:
+    - id: "bronze"
+      name: "BRONZE"
+      description: "The entry-level deployment typology designed for users who require basic functionality and features for your component."
+      minReplicas: 1
+      maxReplicas: 1
+      cpu: null
+      memory: null
+    - id: "silver"
+      name: "SILVER"
+      description: "The intermediate-level deployment typology, offering a balance between advanced features and ease of use."
+      minReplicas: 1
+      maxReplicas: 2
+      cpu: 70
+      memory: null
+    - id: "gold"
+      name: "GOLD"
+      description: "The top-tier deployment typology, tailored for enterprise-level applications and organizations with demanding requirements."
+      minReplicas: 2
+      maxReplicas: 4
+      cpu: 60
+      memory: 550
